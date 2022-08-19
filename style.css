@@ -6,6 +6,14 @@
     font-family: 'Lato', sans-serif;
 }
 
+.container{
+    padding: 50px 0;
+}
+
+.section__title{
+    margin-bottom: 20px;
+}
+
 h1, h2, h3, h4, h5, h6, span{
     color: black;
     text-align: center;
@@ -38,6 +46,11 @@ p{
 .top-bar, footer{
     background-color: rgba(0,0,0,0.8);
 }
+
+section:nth-child(even){
+    background-color: #f8f8f8;
+}
+
 /*
     NAVIGATION BAR
 */
@@ -162,4 +175,51 @@ li{
 .about-me__img{
     width: 100%;
     height: 100%;
+}
+
+/*
+    LANGUAGES
+*/
+
+.language{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.language:hover .language__name{
+    transform: scale(1);
+}
+
+.language__img--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+}
+
+.language__img{
+    width: 100%;
+    max-width: 100px;
+}
+
+.language:hover .language__img{
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+    transition: all 300ms ease;
+}
+
+.language__list{
+    display: flex;
+    width: 100%;    
+}
+
+.language__name{
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transform: all 300ms;
+    font-size: 20px;
 }
