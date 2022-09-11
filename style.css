@@ -6,6 +6,7 @@
   font-family: "Lato", sans-serif;
 }
 
+
 html{
   scroll-behavior: smooth;
 }
@@ -64,7 +65,7 @@ p {
   padding: 0 12px;
 }
 
-.top-bar,
+nav,
 footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -93,14 +94,14 @@ section:nth-child(even) {
     NAVIGATION BAR
 */
 
-.top-bar {
-  margin-bottom: 28px;
+nav{
+  height: 80px;
+  display: flex;
+  margin-bottom: 24px;
 }
 
-nav {
-  height: 60px;
+.nav__container{
   width: 100%;
-  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -115,7 +116,7 @@ nav {
   margin: 0 12px;
 }
 
-.nav__link--anchor {
+.nav__link--anchor, .menu__link{
   color: whitesmoke;
   font-size: 20px;
   font-weight: 700;
@@ -123,7 +124,8 @@ nav {
   margin: 0 16px;
   cursor: pointer;
   display: flex;
-justify-content: center;}
+  justify-content: center;
+}
 
 .nav__link--list {
   display: flex;
@@ -146,9 +148,56 @@ li {
   background-color: rgb(0, 60, 255);
 }
 
+.btn__menu{
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  border: none;
+  color:whitesmoke;
+  cursor: pointer;
+  display: none;
+}
+
+.menu__backdrop{
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
+
+.btn__menu--close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.menu__list{
+  padding: 20px 0;
+}
+
+.menu__open .menu__backdrop{
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu__open{
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 /*
     ABOUT ME 
 */
+
 
 #about-me {
   min-height: 100vh;
@@ -167,7 +216,7 @@ li {
   align-items: center;
   max-width: 500px;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
 }
 
 .text-blue {
@@ -243,6 +292,8 @@ li {
 }
 
 .about-me__info--title {
+  font-size: 50px;
+
   margin-bottom: 16px;
   animation: fade-up 650ms 400ms backwards;
 }
@@ -280,6 +331,7 @@ li {
   display: inline-block;
   animation: animate-wave 650ms infinite ease-in-out;
 }
+
 /*
     LANGUAGES
 */
@@ -497,7 +549,7 @@ li {
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 550px){
   .nav__link:not(:last-child){
     display: none;
   }
@@ -526,5 +578,9 @@ li {
     text-align: center;
     font-size: 32px;
     line-height: 1;
+  }
+
+  .btn__menu{
+    display: flex;
   }
 }

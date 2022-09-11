@@ -10,24 +10,21 @@
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <section id="about-me">
-      <div class="top-bar">
-        <nav>
+      <nav>
+        <div class="nav__container">
           <div id="logo">Ageng Setiyawan</div>
           <ul class="nav__link--list">
             <li class="nav__link">
-              <a
-                href="#languages"
-                class="nav__link--anchor link__hover-effect"
-                >Languages
+              <a href="#languages" class="nav__link--anchor link__hover-effect"
+                >About
               </a>
             </li>
             <li class="nav__link">
-              <a
-                href="#projects"
-                class="nav__link--anchor link__hover-effect"
+              <a href="#projects" class="nav__link--anchor link__hover-effect"
                 >Projects
               </a>
             </li>
@@ -38,9 +35,35 @@
                 >Contact</a
               >
             </li>
+            <li class="nav__link">
+              <a class="nav__link--anchor link__hover-effect nav__link--adjust"
+                ><i class="fas fa-adjust"></i>
+              </a>
+            </li>
           </ul>
-        </nav>
-      </div>
+          <button onclick="openMenu()" class="btn__menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button onclick="closeMenu()" class="btn__menu btn__menu--close">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a onclick="closeMenu()" class="menu__link" href="#languages">About</a>
+              </li>
+              <li class="menu__list">
+                <a onclick="closeMenu()" class="menu__link" href="#projects">Projects</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link" href="mailto: agengwan@icloud.com"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="flex flex-1">
         <div class="about-me__info row">
           <div class="about-me__info--container">
@@ -51,14 +74,15 @@
                 alt="Photo of me"
               />
             </figure>
-            <h1 class="about-me__info--title">
-              Hello I'm <span class="text-blue">Ageng Setiyawan</span>&nbsp;<span class="wave">👋</span>
+            <h1 class="about-me__info--title">Hello!</h1>
+            <h1 class="text-blue about-me__info--title">
+              I'm Ageng &nbsp;<span class="wave">👋</span>
             </h1>
             <p class="about-me__info--para">
               I am a
               <strong class="text-blue">frontend software engineer</strong> with
               a passion to learn and improve. Focusing on a great user
-              experience and ease of use.
+              experience and ease of use. Here's more <span class="text-blue">about me...</span>
             </p>
             <div class="about-me__links">
               <a
@@ -153,7 +177,7 @@
               <div class="project__wrapper">
                 <img
                   class="project__img"
-                  src="./assets/mily.jpg"
+                  src="./assets/book_library.png"
                   alt="project 1"
                 />
                 <div class="project__description">
@@ -268,7 +292,11 @@
       <div class="row footer__row">
         <a href="#" class="footer__anchor">
           <figure class="footer__logo">
-            <img src="./assets/mily.jpg" alt="footer logo" class="footer__logo--img" />
+            <img
+              src="./assets/mily.jpg"
+              alt="footer logo"
+              class="footer__logo--img"
+            />
           </figure>
           <span class="footer__logo--popper">
             Top
