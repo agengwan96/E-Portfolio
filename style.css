@@ -112,11 +112,16 @@ nav{
   padding: 0 12px;
 }
 
-#logo {
-  color: whitesmoke;
-  font-size: 24px;
-  font-weight: 700;
+.logo__container {
+  height: 80px;
+  width: 80px;
   margin: 0 12px;
+
+}
+
+.logo{
+  height: 100%;
+  width: 100%;;
 }
 
 .nav__link--anchor, .menu__link{
@@ -522,7 +527,7 @@ li {
 
 /* For small phones, large phones & tablets */
 @media (max-width: 768px){
-  nav{
+  nav, .logo__container{
     height: 68px;
   }
 
