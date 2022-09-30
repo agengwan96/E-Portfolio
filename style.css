@@ -296,12 +296,11 @@ li {
   width: 100%;
   height: 100%;
   transform: scale(1.5);
-  padding-top: 8px;
+  padding-top: 15px;
 }
 
 .about-me__info--title {
   font-size: 50px;
-
   margin-bottom: 16px;
   animation: fade-up 650ms 400ms backwards;
 }
