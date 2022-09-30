@@ -475,6 +475,10 @@ li {
     transform: translateY(-50%);
 }
 
+.working{
+  display: none;
+}
+
 /*
     FOOTER
 */
