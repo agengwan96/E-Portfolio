@@ -93,6 +93,10 @@ section:nth-child(even) {
   left: 0;
 }
 
+.working{
+  display: none;
+}
+
 /*
     NAVIGATION BAR
 */
@@ -116,7 +120,6 @@ nav{
   height: 80px;
   width: 80px;
   margin: 0 12px;
-
 }
 
 .logo{
@@ -475,9 +478,6 @@ li {
     transform: translateY(-50%);
 }
 
-.working{
-  display: none;
-}
 
 /*
     FOOTER
