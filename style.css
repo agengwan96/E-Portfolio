@@ -44,7 +44,15 @@ h1 {
   font-size: 36px;
 }
 
-p {
+.invert section, #languages{
+  background-color: black;
+}
+
+.invert p:not(.project__description--para), h1:not(.text-blue), h2, h3:not(.project__description--title), span{
+  filter: invert(100%);
+}
+
+p{
   line-height: 1.5;
   font-size: 16px;
 }
@@ -69,7 +77,7 @@ p {
 }
 
 nav,
-footer {
+footer{
   background-color: rgba(0, 0, 0, 0.8);
 }
 
