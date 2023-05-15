@@ -44,11 +44,19 @@ h1 {
   font-size: 36px;
 }
 
-.invert section, #languages{
+.invert #languages{
   background-color: black;
 }
 
-.invert p:not(.project__description--para), h1:not(.text-blue), h2, h3:not(.project__description--title), span{
+.invert section{
+  background-color: black;
+}
+
+.invert h1:not(.text-blue){
+  filter: invert(100%);
+}
+
+.invert p:not(.project__description--para),  h2, h3:not(.project__description--title){
   filter: invert(100%);
 }
 

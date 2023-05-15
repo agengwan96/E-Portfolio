@@ -15,6 +15,6 @@ function darkMode(){
     }
     else{
         invert = false;
-        document.body.classList.remove("invert");
+        document.body.classList.remove('invert');
     }
 }
